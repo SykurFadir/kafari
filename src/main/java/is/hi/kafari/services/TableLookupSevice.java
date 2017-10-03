@@ -82,14 +82,13 @@ public class TableLookupSevice {
         
         JSONArray table = obj.getJSONArray(Integer.toString(tableIndex));
         int entryIndex;
-        //Fylkið er raðað svo fáum röðun bókstafa útfrá ASCII
+        //Fylkið er raðað svo fáum röðun bókstafa útfrá ASCII, bókstafir eru stafrófið
+        //fyrir utan siðasta bókstafinn, sem er Z. 
         if(letter.equals("Z")){
             entryIndex=15;
         }else{
             entryIndex=((int) letter.charAt(0) - 65);
             
-        }
-  
         
         return table.getInt(entryIndex);
     }
