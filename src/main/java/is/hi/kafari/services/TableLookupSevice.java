@@ -70,7 +70,12 @@ public class TableLookupSevice {
         return results;
     }
     
-    
+    /**
+     * Hjálparfall sem setur upplýsingar um decompression á læsilegt form.
+     * @param depth : Dýpt köfunar
+     * @param letter : Bókstafur eftir fyrri köfun. Má vera null.
+     * @return tala sem bæta á við tíma köfunar miðað við bókstaf.   
+     */
     
     private static int addTime(int depth, String letter){
         
